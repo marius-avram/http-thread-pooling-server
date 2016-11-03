@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="libs/css/bootstrap.min.css"></link>
+	<link rel="stylesheet" href="css/narrow-jumbotron.css"></link>
+	<link rel="stylesheet" href="libs/css/bootstrap-toggle.min.css"></link>
+	<link rel="stylesheet" href="css/main.css"></link>
+	<script src="libs/js/jquery-3.1.1.min.js"></script>
+	<script src="libs/js/bootstrap.min.js"></script>
+	<script src="libs/js/bootstrap-toggle.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+
+ <div class="container">
+      <div class="header clearfix">
+        <h3 class="text-muted">House automation</h3>
+        
+      </div>
+	  <nav>
+          <button id="lights-button" type="button" class="btn btn-lg btn-primary">Lights</button>
+          <button id="temperature-button" type="button" class="btn btn-lg btn-warning">Temperature</button>
+          <button id="curtains-button" type="button" class="btn btn-lg btn-success">Curtains</button>
+          <button id="photo-frame-button" type="button" class="btn btn-lg btn-danger">Photo Frame</button>
+      </nav>
+		
+      <div class="row marketing">
+        <div class="col-lg-12">
+          <h4>Control your house</h4>
+          <p>Pick one of the parameters you want to view/change.</p>
+        </div>
+
+      	<div class="col-lg-12 not-visible" id="lights">
+	      	<h4>Lights</h4>
+	      	<br />
+	      	<p>Light #1:&nbsp;&nbsp;<input id="light1" type="checkbox" checked data-toggle="toggle"></p><br />
+	      	<p>Light #2:&nbsp;&nbsp;<input id="light2" type="checkbox" checked data-toggle="toggle"></p><br />
+	      	<p>Light #3:&nbsp;&nbsp;<input id="light3" type="checkbox" checked data-toggle="toggle"></p><br />
+      	</div>
+      	
+      	<div class="col-lg-12 not-visible" id="temperature">
+	      	<h4>Temperature</h4>
+	      	<div id="show-temperature" class="visible">
+	      		<p class="temperature"><span id="temperature1">0.0</span>&deg;C</p>
+	      		<p>
+	      			<button id="change-temperature-button" type="button" class="btn btn-lg btn-info">Change</button>
+	      		</p>
+	      		<br />
+	      	</div>
+	      	<div id="edit-temperature" class="not-visible">
+	      		<input id="input-temperature1" class="temperature-input" type='number' step='0.1' value='20.5' placeholder='0.0' /><br /><br />
+	      		<p>
+	      			<button id="save-button-temperature1" type="button" class="btn btn-lg btn-success">Save</button>
+	      		</p>
+	      		<br />
+	      	</div>
+      	</div>
+      	
+      	<div class="col-lg-12 not-visible" id="curtains">
+	      	<h4>Curtains</h4>
+	      	<br />
+	      	<p>Closed or opened: <input id="curtains1" type="checkbox" checked data-toggle="toggle"></p><br />
+	    </div>
+	    
+	    <div class="col-lg-12 not-visible" id="photo-frame">
+	    	<h4>Photo frame</h4>
+	    	<br />
+	    	<div class="img-container">
+	    		<img id="image" src="imgs/image.jpg" class="img" alt="Picture" />
+	    	</div>
+	    	<br />
+	    	<br />
+	    	<form method="POST" action="imgs/image.jpg" enctype="multipart/form-data" id="image-form">
+	    		<input type="file" name="image">
+	    		<input class="btn btn-lg btn-info" name="submit" type="submit">
+	    	</form>
+	    	<button class="btn btn-lg btn-danger" name="delete" id="image-delete">Delete</button>
+	    </div>
+      </div>
+		
+	  <footer class="footer">
+        <p>&copy; 2016 House automation, Marius Avram</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+.temperature {
+	font-size: 50px;	
+}
+
+.temperature-input {
+	height: 50px;
+	max-width: 130px;
+	font-size: 48px;
+	color: #777;
+}
+
+.not-visible {
+	display: none;
+}
+
+.visible {
+	display: auto;
+}
+
+form {
+	display: inline-block;
+}
+
+input[type=file]{
+	display: inline-block;
+}
+
+.img {
+	width: 400px;
+}
+
+.img-container {
+	background-color:#eee0ff;
+	width: 400px;
+	min-height: 200px;
+}
